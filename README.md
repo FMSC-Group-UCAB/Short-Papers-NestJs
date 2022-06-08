@@ -22,14 +22,22 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## _myOnlineDoctor-NestJs_
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+_The Hackers_'s subgroup members:
+- Carlos Doffiny S-V
+- Manuel Da Pena
+- Santiago Figueroa 
+- Froilán Roa
 
 ## Installation
 
 ```bash
+#npm dependencies
 $ npm install
+
+#.env.example configuration
+$ cp .env.example .env
 ```
 
 ## Running the app
