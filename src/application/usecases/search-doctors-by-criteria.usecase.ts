@@ -9,7 +9,7 @@ export class SearchDoctorsByCriteriaUseCase extends Observable {
     constructor(private readonly doctorsRepository: IRepository<Doctor>) { super(); }
 
     async searchDoctor(searchDoctorsByCriteria: ISearchDoctorsByCriteriaDto): Promise<ISearchDoctorsByCriteriaResponseDto> {
-        const doctors: Doctor[] = await this.doctorsRepository.find({ Specialty: [searchDoctorsByCriteria.specialty] });
+        const doctors: Doctor[] = await this.doctorsRepository.find({ Specialty: [searchDoctorsByCriteria.specialty] }, { pageIndex: searchDoctorsByCriteria.pageIndex, pageSize: searchDoctorsByCriteria.pageSize });
         return { doctors };
     }
 }
