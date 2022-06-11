@@ -5,6 +5,12 @@ import { DoctorLocation } from "../valueobjects/doctor/doctor-location";
 import { SpecialtyType } from "../enums/specialty-type.enum";
 import { HoldType } from "../enums/hold-type.enum";
 import { Sex } from "../enums/sex.enum";
+import { InvalidIdException } from "../exceptions/doctors/invalid-id.exception";
+import { InvalidFirstNameException } from "../exceptions/doctors/invalid-first-name.exception";
+import { InvalidLastNameException } from "../exceptions/doctors/invalid-last-name.exception";
+import { InvalidSpecialtyException } from "../exceptions/doctors/invalid-specialty.exception";
+import { InvalidLocationException } from "../exceptions/doctors/invalid-location.exception";
+import { InvalidHoldException } from "../exceptions/doctors/invalid-hold.exception";
 
 export class Doctor {
     private constructor(
@@ -61,22 +67,22 @@ export class Doctor {
     /** Valida los atributos de la entidad.*/
     private validate(): void {
         if (this.id == null || this.id == undefined) {
-            throw new Error("El Id del doctor no puede ser null/undefined");
+            throw new InvalidIdException();
         }
         if (this.firstName == null || this.firstName == undefined) {
-            throw new Error("El primer nombre del doctor no puede ser null/undefined");
+            throw new InvalidFirstNameException();
         }
         if (this.lastName == null || this.lastName == undefined) {
-            throw new Error("El apellido del doctor no puede ser null/undefined");
+            throw new InvalidLastNameException();
         }
         if (this.specialty == null || this.specialty == undefined) {
-            throw new Error("La especialidad del doctor no puede ser null/undefined");
+            throw new InvalidSpecialtyException();
         }
         if (this.location == null || this.location == undefined) {
-            throw new Error("La ubicacion del doctor no puede ser null/undefined");
+            throw new InvalidLocationException();
         }
         if (this.holdType == null || this.holdType == undefined) {
-            throw new Error("La retencion del doctor no puede ser null/undefined");
+            throw new InvalidHoldException();
         }
     }
 }
