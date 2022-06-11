@@ -12,7 +12,7 @@ export class DoctorsController {
     constructor(private readonly manager: EntityManager) { }
 
     @Post('search')
-    async findChildcarerByCriteria(@Body() searchDoctorByCriteriaDto: SearchDoctorsByCriteriaDto, @Query('pageIndex') pageIndex, @Query('pageSize') pageSize): Promise<Doctor[]> {
+    async findDoctorsByCriteria(@Body() searchDoctorByCriteriaDto: SearchDoctorsByCriteriaDto, @Query('pageIndex') pageIndex, @Query('pageSize') pageSize): Promise<Doctor[]> {
         const service = new ErrorHandlerServiceDecorator(
             new AuditingServiceDecorator(
                 new SearchDoctorsByCriteriaService(this.manager)
