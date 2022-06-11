@@ -6,6 +6,7 @@ import { DoctorFirstName } from "src/domain/valueobjects/doctor/doctor-first-nam
 import { DoctorLastName } from "src/domain/valueobjects/doctor/doctor-last-name";
 import { SpecialtyType } from "src/domain/enums/specialty-type.enum";
 import { HoldType } from "src/domain/enums/hold-type.enum";
+import { SpecialtyEntity } from "../entities/specialty.entity";
 
 export class DoctorToEntityMapper {
 
@@ -16,14 +17,29 @@ export class DoctorToEntityMapper {
         }
         );
         
+        const aux : SpecialtyEntity[] = [];
+
+        specialties.forEach(specialty => {
+            aux.push({
+                id: null,
+                specialty: specialty,
+                createdAt: null,
+                updatedAt: null
+            });
+        }
+        );
 
         return {id : doctor.Id.value,
             firstName : doctor.FirstName.value,
             lastName : doctor.LastName.value,
-            specialties : specialties,
+            sex: doctor.Sex,
+            specialties : aux,
             latitude : doctor.Location.ValueLatitude,
             longitude : doctor.Location.ValueLongitude,
             holdType : doctor.HoldType,
+            createdAt: null,
+            updatedAt: null
+
             };
     }
 
