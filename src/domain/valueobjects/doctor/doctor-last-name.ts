@@ -2,7 +2,7 @@
 import {IValueObject} from '../../interfaces/value-object.interface';
 
 export class DoctorLastName implements IValueObject<DoctorLastName> {
-    private constructor(private readonly lastName: String) { }
+    private constructor(private readonly lastName: string) { }
 
     get value() { return this.lastName; }
 
@@ -15,7 +15,7 @@ export class DoctorLastName implements IValueObject<DoctorLastName> {
      * @param lastName apellido del doctor
      * @returns `DoctorLastName`
      */
-    public static create(lastName: String): DoctorLastName {
+    public static create(lastName: string): DoctorLastName {
         if (lastName == null || lastName == undefined){
             throw new Error('El apellido del doctor no puede ser null/undefined.');
         }

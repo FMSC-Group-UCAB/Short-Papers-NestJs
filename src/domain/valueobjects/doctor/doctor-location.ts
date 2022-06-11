@@ -5,7 +5,7 @@ import { IValueObject } from '../../interfaces/value-object.interface';
 export class DoctorLocation implements IValueObject<DoctorLocation> {
 
 
-    private constructor(private readonly latitude: String, private readonly longitude: String) { }
+    private constructor(private readonly latitude: string, private readonly longitude: string) { }
 
     get ValueLatitude() { return this.latitude; }
     get ValueLongitude() { return this.longitude; }
@@ -18,7 +18,7 @@ export class DoctorLocation implements IValueObject<DoctorLocation> {
      * @param latitude latitud del doctor
      * @param longitude longitud del doctor
      * @returns */
-    public static create(latitude: String, longitude: String): DoctorLocation {
+    public static create(latitude: string, longitude: string): DoctorLocation {
         if (latitude == null || latitude == undefined) {
             throw new InvalidLatitudeException();
         }
