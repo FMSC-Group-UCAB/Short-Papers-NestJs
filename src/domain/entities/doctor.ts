@@ -69,7 +69,7 @@ export class Doctor {
         if (this.lastName == null || this.lastName == undefined) {
             throw new Error("El apellido del doctor no puede ser null/undefined");
         }
-        if (this.specialty == null || this.specialty == undefined || this.specialty.length <= 0) {
+        if (this.specialty == null || this.specialty == undefined) {
             throw new Error("La especialidad del doctor no puede ser null/undefined");
         }
         if (this.location == null || this.location == undefined) {

@@ -4,6 +4,6 @@ export interface IRepository<T> {
     save(entity: T): Promise<void>;
     update(entity: T): Promise<void>;
     findOne(items: Partial<T>): Promise<T>;
-    find(items: Partial<T>): Promise<T[]>;
+    find(items: Partial<T>, options?: { pageIndex: number, pageSize: number }): Promise<T[]>;
     delete(entity: T): Promise<void>;
 }

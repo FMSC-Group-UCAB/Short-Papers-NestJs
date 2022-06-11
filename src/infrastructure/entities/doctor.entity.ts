@@ -24,5 +24,5 @@ export class DoctorEntity {
     @UpdateDateColumn({ name: 'updated_at' }) updatedAt: Date;
 
     @JoinTable()
-    @ManyToMany(() => SpecialtyEntity, (specialtyEntity) => specialtyEntity.specialty) specialties: SpecialtyEntity[];
+    @ManyToMany(() => SpecialtyEntity, (specialtyEntity) => specialtyEntity.specialty, { eager: true }) specialties: SpecialtyEntity[];
 }
