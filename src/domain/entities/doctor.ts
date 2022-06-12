@@ -11,6 +11,7 @@ import { InvalidLastNameException } from "../exceptions/doctors/invalid-last-nam
 import { InvalidSpecialtyException } from "../exceptions/doctors/invalid-specialty.exception";
 import { InvalidLocationException } from "../exceptions/doctors/invalid-location.exception";
 import { InvalidHoldException } from "../exceptions/doctors/invalid-hold.exception";
+import { DoctorImage } from "../valueobjects/doctor/doctor-image";
 
 export class Doctor {
     private constructor(
@@ -20,7 +21,8 @@ export class Doctor {
         private specialty: SpecialtyType[],
         private location: DoctorLocation,
         private holdType: HoldType,
-        private sex: Sex
+        private sex: Sex,
+        private image: DoctorImage
     ) {
         this.validate();
     }
@@ -33,6 +35,7 @@ export class Doctor {
     get Location() { return this.location; }
     get HoldType() { return this.holdType; }
     get Sex() { return this.sex; }
+    get Image() { return this.image; }
 
     /**
      * Patron Factory
@@ -43,8 +46,8 @@ export class Doctor {
      * @param location ubicacion del doctor
      * @param holdType retencion que el doctor pueda tener en el sistema
      * @returns `Doctor` */
-    public static create(id: DoctorId, firstName: DoctorFirstName, lastName: DoctorLastName, specialty: SpecialtyType[], location: DoctorLocation, holdType: HoldType, sex: Sex): Doctor {
-        return new Doctor(id, firstName, lastName, specialty, location, holdType, sex);
+    public static create(id: DoctorId, firstName: DoctorFirstName, lastName: DoctorLastName, specialty: SpecialtyType[], location: DoctorLocation, holdType: HoldType, sex: Sex, image: DoctorImage): Doctor {
+        return new Doctor(id, firstName, lastName, specialty, location, holdType, sex, image);
     }
 
     /**
@@ -54,13 +57,14 @@ export class Doctor {
      * @param specialty especialidad del doctor.
      * @param location ubicacion del doctor.
      * @param holdType retencion que el doctor pueda tener en el sistema. */
-    public update(firstName: DoctorFirstName, lastName: DoctorLastName, specialty: SpecialtyType[], location: DoctorLocation, holdType: HoldType, sex: Sex) {
+    public update(firstName: DoctorFirstName, lastName: DoctorLastName, specialty: SpecialtyType[], location: DoctorLocation, holdType: HoldType, sex: Sex, image: DoctorImage) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.specialty = specialty;
         this.location = location;
         this.holdType = holdType;
         this.sex = sex;
+        this.image = image;
         this.validate();
     }
 
