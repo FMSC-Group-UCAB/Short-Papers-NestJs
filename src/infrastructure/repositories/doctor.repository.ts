@@ -3,10 +3,12 @@ import { SpecialtyType } from "src/domain/enums/specialty-type.enum";
 import { IRepository } from "src/domain/interfaces/repository.interface";
 import { DoctorFirstName } from "src/domain/valueobjects/doctor/doctor-first-name";
 import { DoctorId } from "src/domain/valueobjects/doctor/doctor-id";
+import { DoctorImage } from "src/domain/valueobjects/doctor/doctor-image";
 import { DoctorLastName } from "src/domain/valueobjects/doctor/doctor-last-name";
 import { DoctorLocation } from "src/domain/valueobjects/doctor/doctor-location";
 import { Repository } from "typeorm";
 import { DoctorEntity } from "../entities/doctor.entity";
+import { DoctorEntityToDoctor } from "../mappers/doctor-entity-to-doctor.mapper";
 
 export class DoctorRepository implements IRepository<Doctor>{
 
@@ -36,22 +38,8 @@ export class DoctorRepository implements IRepository<Doctor>{
 
         const domainDoctors: Doctor[] = [];
 
-        entityDoctor.forEach(doctor => {
-            const specialties: SpecialtyType[] = [];
-
-            doctor.specialties.forEach((specialtyType) => specialties.push(specialtyType.specialty));
-
-            const domainDoctor = Doctor.create(
-                DoctorId.create(doctor.id),
-                DoctorFirstName.create(doctor.firstName),
-                DoctorLastName.create(doctor.lastName),
-                specialties,
-                DoctorLocation.create(doctor.latitude, doctor.longitude),
-                doctor.holdType,
-                doctor.sex
-            );
-
-            domainDoctors.push(domainDoctor);
+        entityDoctor.forEach(doctorEntity => {
+            domainDoctors.push(DoctorEntityToDoctor.map(doctorEntity));
         });
 
         return domainDoctors;

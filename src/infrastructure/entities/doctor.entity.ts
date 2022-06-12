@@ -19,6 +19,8 @@ export class DoctorEntity {
 
     @Column({ length: 32 }) longitude: string;
 
+    @Column({ length: 255 }) image: string;
+
     @CreateDateColumn({ name: 'created_at' }) createdAt: Date;
 
     @UpdateDateColumn({ name: 'updated_at' }) updatedAt: Date;
