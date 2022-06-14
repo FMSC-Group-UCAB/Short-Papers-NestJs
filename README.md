@@ -25,8 +25,8 @@
 ## _myOnlineDoctor-NestJs_
 
 _The Hackers_'s subgroup members:
-- Carlos Doffiny S-V
 - Manuel Da Pena
+- Carlos Doffiny S-V
 - Santiago Figueroa 
 - Froilán Roa
 
