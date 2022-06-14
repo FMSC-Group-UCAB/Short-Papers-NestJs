@@ -1,7 +1,7 @@
 import { BadRequestException } from "@nestjs/common";
-import { ServiceDecorator } from "./service.decorator";
+import { QueryServiceDecorator } from "./query-service.decorator";
 
-export class ErrorHandlerServiceDecorator<T, E> extends ServiceDecorator<T, E>{
+export class ErrorHandlerQueryServiceDecorator<T, E> extends QueryServiceDecorator<T, E>{
     async execute(dto: T): Promise<E> {
         try {
             return super.execute(dto);

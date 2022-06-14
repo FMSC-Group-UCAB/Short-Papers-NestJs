@@ -1,19 +1,20 @@
 import { SearchDoctorsByCriteriaUseCase } from "src/application/usecases/search-doctors-by-criteria.usecase";
 import { EntityManager } from "typeorm";
-import { ISearchDoctorsByCriteriaDto } from "../../application/dtos/search-doctors-by-criteria.dto.interface";
 import { DoctorEntity } from "../entities/doctor.entity";
 import { DoctorRepository } from "../repositories/doctor.repository";
-import { IService } from "./interface/service.interface";
+import { IQueryService } from "./interface/query-service.interface";
 import { Injectable } from '@nestjs/common';
 import { DoctorDto } from "../dtos/doctor.dto";
 import { DoctorToDoctorDto } from "../mappers/doctor-to-doctor-dto.mapper";
+import { ISearchDoctorsByCriteriaResponseDto } from "./dtos/search-doctors-by-criteria-response.dto";
+import { ISearchDoctorsByCriteriaRequestDto } from "./dtos/search-doctors-by-criteria-request.dto";
 
 @Injectable()
-export class SearchDoctorsByCriteriaService implements IService<ISearchDoctorsByCriteriaDto, DoctorDto[]>{
+export class SearchDoctorsByCriteriaService implements IQueryService<ISearchDoctorsByCriteriaRequestDto, ISearchDoctorsByCriteriaResponseDto>{
 
     constructor(private readonly manager: EntityManager) { }
 
-    async execute(dto: ISearchDoctorsByCriteriaDto): Promise<DoctorDto[]> {
+    async execute(dto: ISearchDoctorsByCriteriaRequestDto): Promise<ISearchDoctorsByCriteriaResponseDto> {
         const doctorRepository = this.manager.getRepository(DoctorEntity);
 
         const usecase = new SearchDoctorsByCriteriaUseCase(new DoctorRepository(doctorRepository));
@@ -25,6 +26,6 @@ export class SearchDoctorsByCriteriaService implements IService<ISearchDoctorsBy
             doctorDto.push(DoctorToDoctorDto.map(doctor));
         });
 
-        return doctorDto;
+        return { doctors: doctorDto };
     }
 }

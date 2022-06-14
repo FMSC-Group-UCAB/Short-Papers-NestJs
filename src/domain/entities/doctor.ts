@@ -46,7 +46,7 @@ export class Doctor {
      * @param location ubicacion del doctor
      * @param holdType retencion que el doctor pueda tener en el sistema
      * @returns `Doctor` */
-    public static create(id: DoctorId, firstName: DoctorFirstName, lastName: DoctorLastName, specialty: SpecialtyType[], location: DoctorLocation, holdType: HoldType, sex: Sex, image: DoctorImage): Doctor {
+    public static create(id: DoctorId, firstName: DoctorFirstName, lastName: DoctorLastName, specialty: SpecialtyType[], location: DoctorLocation, holdType: HoldType, sex: Sex, image?: DoctorImage): Doctor {
         return new Doctor(id, firstName, lastName, specialty, location, holdType, sex, image);
     }
 
@@ -57,7 +57,7 @@ export class Doctor {
      * @param specialty especialidad del doctor.
      * @param location ubicacion del doctor.
      * @param holdType retencion que el doctor pueda tener en el sistema. */
-    public update(firstName: DoctorFirstName, lastName: DoctorLastName, specialty: SpecialtyType[], location: DoctorLocation, holdType: HoldType, sex: Sex, image: DoctorImage) {
+    public update(firstName: DoctorFirstName, lastName: DoctorLastName, specialty: SpecialtyType[], location: DoctorLocation, holdType: HoldType, sex: Sex, image?: DoctorImage) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.specialty = specialty;
