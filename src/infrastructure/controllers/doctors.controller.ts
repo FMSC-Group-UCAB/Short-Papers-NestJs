@@ -3,8 +3,8 @@ import { join } from 'path';
 import { EntityManager } from 'typeorm';
 import { DoctorDto } from '../dtos/doctor.dto';
 import { SearchDoctorsByCriteriaDto } from '../dtos/search-doctors-by-criteria.dto';
-import { AuditingServiceDecorator } from '../services/decorators/auditing.service.decorator';
-import { ErrorHandlerServiceDecorator } from '../services/decorators/error-handler.service.decorator';
+import { AuditingQueryServiceDecorator } from '../services/decorators/auditing.query.service.decorator';
+import { ErrorHandlerQueryServiceDecorator } from '../services/decorators/error-handler.query.service.decorator';
 import { SearchDoctorsByCriteriaService } from '../services/search-doctors-by-criteria.service';
 
 @Controller('doctors')
@@ -14,13 +14,13 @@ export class DoctorsController {
 
     @Post('search')
     async findDoctorsByCriteria(@Body() searchDoctorByCriteriaDto: SearchDoctorsByCriteriaDto, @Query('pageIndex') pageIndex, @Query('pageSize') pageSize): Promise<DoctorDto[]> {
-        const service = new ErrorHandlerServiceDecorator(
-            new AuditingServiceDecorator(
+        const service = new ErrorHandlerQueryServiceDecorator(
+            new AuditingQueryServiceDecorator(
                 new SearchDoctorsByCriteriaService(this.manager)
             )
         );
 
-        return (await service.execute({ specialty: searchDoctorByCriteriaDto.specialty, pageIndex, pageSize }));
+        return (await service.execute({ specialty: searchDoctorByCriteriaDto.specialty, pageIndex, pageSize })).doctors;
     }
 
     @Get('image/:imagename')
