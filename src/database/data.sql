@@ -1,103 +1,103 @@
 --Creando tablas auxiliares para la generacion de datos.
 
-CREATE TABLE NOMBRES (
-    nombre varchar,
-    sexo varchar
+CREATE TABLE public.nombres (
+    nombre character varying,
+    sexo character varying,
+    foto character varying
 );
+--Creando los nombres
 
--- Insertando los nombres
-
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Ana', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Antonella', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Camila', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Elizabeth', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Isabella', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Mariana', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Nicole', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Rosa', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Samantha', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Sofía', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Valentina', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Valeria', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Victoria', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Ángel', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Antonio', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Carlos', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Diego', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Francisco', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Gabriel', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Jesús', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Jorge', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Juan', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Julio', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Luis', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Manuel', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Miguel', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Pedro', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Rafael', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Ramón', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Samuel', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Víctor', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Sofía', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Isabella', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Valentina', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Emma', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Camila', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Valeria', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Victoria', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Martina', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Ximena', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Luciana', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Santiago', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Mateo', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Sebastián', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Alejandro', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Matías', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Diego', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Samuel', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Nicolás', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Daniel', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Martín', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Abigail', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Ava', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Elizabeth', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Emily', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Emma', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Isabella', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Madison', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Mia', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Olivia', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Sophia', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Aiden', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Alexander', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Ethan', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Jacob', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Jayden', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Liam', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Mason', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Michael', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Noah', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('William', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Alba', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Carla', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Carmen', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Daniela', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Julia', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Lucía', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('María', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Paula', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Sara', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Sofía', 'F');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Adrián', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Alejandro', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Álvaro', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Daniel', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('David', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Diego', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Hugo', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Javier', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Mario', 'M');
-INSERT INTO public.nombres (nombre, sexo) VALUES ('Pablo', 'M');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Ana', 'F', 'doc_f_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Antonella', 'F', 'doc_f_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Camila', 'F', 'doc_f_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Elizabeth', 'F', 'doc_f_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Isabella', 'F', 'doc_f_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Mariana', 'F', 'doc_f_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Nicole', 'F', 'doc_f_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Rosa', 'F', 'doc_f_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Samantha', 'F', 'doc_f_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Sofía', 'F', 'doc_f_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Valentina', 'F', 'doc_f_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Valeria', 'F', 'doc_f_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Victoria', 'F', 'doc_f_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Ángel', 'M', 'doc_m_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Antonio', 'M', 'doc_m_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Carlos', 'M', 'doc_m_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Diego', 'M', 'doc_m_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Francisco', 'M', 'doc_m_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Gabriel', 'M', 'doc_m_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Jesús', 'M', 'doc_m_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Jorge', 'M', 'doc_m_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Juan', 'M', 'doc_m_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Julio', 'M', 'doc_m_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Luis', 'M', 'doc_m_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Manuel', 'M', 'doc_m_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Miguel', 'M', 'doc_m_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Pedro', 'M', 'doc_m_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Rafael', 'M', 'doc_m_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Ramón', 'M', 'doc_m_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Samuel', 'M', 'doc_m_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Víctor', 'M', 'doc_m_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Sofía', 'F', 'doc_f_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Isabella', 'F', 'doc_f_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Valentina', 'F', 'doc_f_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Emma', 'F', 'doc_f_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Camila', 'F', 'doc_f_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Valeria', 'F', 'doc_f_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Victoria', 'F', 'doc_f_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Martina', 'F', 'doc_f_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Ximena', 'F', 'doc_f_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Luciana', 'F', 'doc_f_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Santiago', 'M', 'doc_m_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Mateo', 'M', 'doc_m_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Sebastián', 'M', 'doc_m_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Alejandro', 'M', 'doc_m_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Matías', 'M', 'doc_m_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Diego', 'M', 'doc_m_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Samuel', 'M', 'doc_m_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Nicolás', 'M', 'doc_m_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Daniel', 'M', 'doc_m_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Martín', 'M', 'doc_m_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Abigail', 'F', 'doc_f_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Ava', 'F', 'doc_f_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Elizabeth', 'F', 'doc_f_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Emily', 'F', 'doc_f_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Emma', 'F', 'doc_f_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Isabella', 'F', 'doc_f_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Madison', 'F', 'doc_f_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Mia', 'F', 'doc_f_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Olivia', 'F', 'doc_f_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Sophia', 'F', 'doc_f_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Aiden', 'F', 'doc_f_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Alexander', 'M', 'doc_m_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Ethan', 'M', 'doc_m_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Jacob', 'M', 'doc_m_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Jayden', 'M', 'doc_m_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Liam', 'M', 'doc_m_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Mason', 'M', 'doc_m_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Michael', 'M', 'doc_m_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Noah', 'M', 'doc_m_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('William', 'M', 'doc_m_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Alba', 'F', 'doc_f_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Carla', 'F', 'doc_f_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Carmen', 'F', 'doc_f_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Daniela', 'F', 'doc_f_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Julia', 'F', 'doc_f_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Lucía', 'F', 'doc_f_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('María', 'F', 'doc_f_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Paula', 'F', 'doc_f_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Sara', 'F', 'doc_f_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Sofía', 'F', 'doc_f_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Adrián', 'M', 'doc_m_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Alejandro', 'M', 'doc_m_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Álvaro', 'M', 'doc_m_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Daniel', 'M', 'doc_m_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('David', 'M', 'doc_m_5.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Diego', 'M', 'doc_m_1.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Hugo', 'M', 'doc_m_2.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Javier', 'M', 'doc_m_3.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Mario', 'M', 'doc_m_4.png');
+INSERT INTO public.nombres (nombre, sexo, foto) VALUES ('Pablo', 'M', 'doc_m_5.png');
 
 CREATE TABLE APELLIDOS (
     apellido varchar  
@@ -233,18 +233,19 @@ current_doctor int; -- get the id of the just created doctor
 ran_quant int; -- random quantity of specialties the doctor is going to have
 max_specialties int; -- the ammount of current specialties in record
 count_specialties int; --counter for the while loop to assign specialties
+foto varchar; -- random photo of the doctor
 begin
    cont := 0;
 	while (cont < i) loop
 		-- Getting: a Random name, sex, specialty, latitude and longitude
-		select * into nombre,sexo from nombres n order by random() limit 1;
+		select * into nombre,sexo,foto from nombres n order by random() limit 1;
 		select * into apellido from apellidos a order by random() limit 1;
 		ran_latitud := random() *100 + 5;
 		ran_longitud := random() *-100 +5;
 		
 		--Creating the doctor itself
 		insert into doctors (first_name,last_name,sex,"holdType",latitude,longitude,created_at,updated_at,image)
-		values (nombre,apellido,Cast(sexo as doctors_sex_enum),'NONE',ran_latitud,ran_longitud,now(),now(),'doc1.jpg');
+		values (nombre,apellido,Cast(sexo as doctors_sex_enum),'NONE',ran_latitud,ran_longitud,now(),now(),foto);
 		
 		-- Getting the id of the last doctor
 		select max(id) into current_doctor from doctors;
