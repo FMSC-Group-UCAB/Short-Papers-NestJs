@@ -1,11 +1,5 @@
 import { Doctor } from "src/domain/entities/doctor";
-import { SpecialtyType } from "src/domain/enums/specialty-type.enum";
 import { IRepository } from "src/domain/interfaces/repository.interface";
-import { DoctorFirstName } from "src/domain/valueobjects/doctor/doctor-first-name";
-import { DoctorId } from "src/domain/valueobjects/doctor/doctor-id";
-import { DoctorImage } from "src/domain/valueobjects/doctor/doctor-image";
-import { DoctorLastName } from "src/domain/valueobjects/doctor/doctor-last-name";
-import { DoctorLocation } from "src/domain/valueobjects/doctor/doctor-location";
 import { Repository } from "typeorm";
 import { DoctorEntity } from "../entities/doctor.entity";
 import { DoctorEntityToDoctor } from "../mappers/doctor-entity-to-doctor.mapper";
