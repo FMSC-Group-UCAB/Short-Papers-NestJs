@@ -1,5 +1,5 @@
 import { IsEnum, IsOptional } from "class-validator";
-import { SpecialtyType } from "src/domain/enums/specialty-type.enum";
+import { SpecialtyType } from "../../domain/enums/specialty-type.enum";
 
 export class SearchDoctorsByCriteriaDto {
     @IsOptional()

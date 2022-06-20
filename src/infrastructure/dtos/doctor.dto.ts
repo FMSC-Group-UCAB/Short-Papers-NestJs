@@ -1,6 +1,6 @@
-import { HoldType } from "src/domain/enums/hold-type.enum";
-import { Sex } from "src/domain/enums/sex.enum";
-import { SpecialtyType } from "src/domain/enums/specialty-type.enum";
+import { HoldType } from "../../domain/enums/hold-type.enum";
+import { Sex } from "../../domain/enums/sex.enum";
+import { SpecialtyType } from "../../domain/enums/specialty-type.enum";
 
 export class DoctorDto {
     id: number;

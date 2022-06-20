@@ -1,4 +1,4 @@
-import { Doctor } from "src/domain/entities/doctor";
+import { Doctor } from "../../domain/entities/doctor";
 
 export interface ISearchDoctorsByCriteriaResponseDto {
     doctors: Doctor[];

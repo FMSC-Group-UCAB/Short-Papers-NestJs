@@ -1,4 +1,4 @@
-import { IQueryService } from "src/infrastructure/services/interface/query-service.interface";
+import { IQueryService } from "../../../infrastructure/services/interface/query-service.interface";
 
 export abstract class QueryServiceDecorator<T, E> implements IQueryService<T, E>{
     private readonly service: IQueryService<T, E>;

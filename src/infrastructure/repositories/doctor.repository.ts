@@ -1,5 +1,5 @@
-import { Doctor } from "src/domain/entities/doctor";
-import { IRepository } from "src/domain/interfaces/repository.interface";
+import { Doctor } from "../../domain/entities/doctor";
+import { IRepository } from "../../domain/interfaces/repository.interface";
 import { Repository } from "typeorm";
 import { DoctorEntity } from "../entities/doctor.entity";
 import { DoctorEntityToDoctor } from "../mappers/doctor-entity-to-doctor.mapper";

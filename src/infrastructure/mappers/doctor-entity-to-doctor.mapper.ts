@@ -1,11 +1,11 @@
-import { Doctor } from "src/domain/entities/doctor";
+import { Doctor } from "../../domain/entities/doctor";
 import { DoctorEntity } from "../entities/doctor.entity";
-import { SpecialtyType } from "src/domain/enums/specialty-type.enum";
-import { DoctorId } from "src/domain/valueobjects/doctor/doctor-id";
-import { DoctorFirstName } from "src/domain/valueobjects/doctor/doctor-first-name";
-import { DoctorLastName } from "src/domain/valueobjects/doctor/doctor-last-name";
-import { DoctorLocation } from "src/domain/valueobjects/doctor/doctor-location";
-import { DoctorImage } from "src/domain/valueobjects/doctor/doctor-image";
+import { SpecialtyType } from "../../domain/enums/specialty-type.enum";
+import { DoctorId } from "../../domain/valueobjects/doctor/doctor-id";
+import { DoctorFirstName } from "../../domain/valueobjects/doctor/doctor-first-name";
+import { DoctorLastName } from "../../domain/valueobjects/doctor/doctor-last-name";
+import { DoctorLocation } from "../../domain/valueobjects/doctor/doctor-location";
+import { DoctorImage } from "../../domain/valueobjects/doctor/doctor-image";
 
 export class DoctorEntityToDoctor {
 

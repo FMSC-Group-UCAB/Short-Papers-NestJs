@@ -1,7 +1,7 @@
-import { Doctor } from "src/domain/entities/doctor";
-import { IRepository } from "src/domain/interfaces/repository.interface";
-import { Observable } from "src/domain/observables/observable";
-import { ISearchDoctorsByCriteriaDto } from "src/application/dtos/search-doctors-by-criteria.dto.interface";
+import { Doctor } from "../../domain/entities/doctor";
+import { IRepository } from "../../domain/interfaces/repository.interface";
+import { Observable } from "../../domain/observables/observable";
+import { ISearchDoctorsByCriteriaDto } from "../../application/dtos/search-doctors-by-criteria.dto.interface";
 import { ISearchDoctorsByCriteriaResponseDto } from "../dtos/search-doctors-by-criteria-response.dto.interface";
 
 export class SearchDoctorsByCriteriaUseCase extends Observable {

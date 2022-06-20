@@ -1,4 +1,4 @@
-import { Doctor } from "src/domain/entities/doctor";
+import { Doctor } from "../../domain/entities/doctor";
 import { DoctorDto } from "../dtos/doctor.dto";
 
 export class DoctorToDoctorDto {

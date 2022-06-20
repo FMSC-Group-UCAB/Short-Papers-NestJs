@@ -1,4 +1,4 @@
-import { SpecialtyType } from "src/domain/enums/specialty-type.enum";
+import { SpecialtyType } from "../../domain/enums/specialty-type.enum";
 import { Column, CreateDateColumn, Entity, Index, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity({ name: 'specialty' })

@@ -1,4 +1,4 @@
-import { SearchDoctorsByCriteriaUseCase } from "src/application/usecases/search-doctors-by-criteria.usecase";
+import { SearchDoctorsByCriteriaUseCase } from "../../application/usecases/search-doctors-by-criteria.usecase";
 import { EntityManager } from "typeorm";
 import { DoctorEntity } from "../entities/doctor.entity";
 import { DoctorRepository } from "../repositories/doctor.repository";

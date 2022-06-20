@@ -1,5 +1,5 @@
-import { InvalidLatitudeException } from 'src/domain/exceptions/doctors/invalid-latitude.exception';
-import { InvalidLongitudeException } from 'src/domain/exceptions/doctors/invalid-longitude.exception';
+import { InvalidLatitudeException } from '../../../domain/exceptions/doctors/invalid-latitude.exception';
+import { InvalidLongitudeException } from '../../../domain/exceptions/doctors/invalid-longitude.exception';
 import { IValueObject } from '../../interfaces/value-object.interface';
 
 export class DoctorLocation implements IValueObject<DoctorLocation> {

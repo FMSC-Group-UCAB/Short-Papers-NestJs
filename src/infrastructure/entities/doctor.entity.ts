@@ -1,5 +1,5 @@
-import { HoldType } from "src/domain/enums/hold-type.enum";
-import { Sex } from "src/domain/enums/sex.enum";
+import { HoldType } from "../../domain/enums/hold-type.enum";
+import { Sex } from "../../domain/enums/sex.enum";
 import { Column, CreateDateColumn, Entity, Index, JoinTable, ManyToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { SpecialtyEntity } from "./specialty.entity";
 
